@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y \
 	gcc \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install --upgrade pip \
-	&& pip3 install nose coverage distribute \
-	&& coverage --version
-
+RUN pip3 --no-cache-dir install --upgrade pip \
+	&& pip3 --no-cache-dir install --upgrade coverage \
+	&& pip3 --no-cache-dir install --upgrade nose
