@@ -12,3 +12,5 @@ RUN pip3 --no-cache-dir install --upgrade pip \
 		coverage \
 		nose \
 		mypy
+
+USER runner
