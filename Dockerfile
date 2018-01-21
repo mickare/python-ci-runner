@@ -8,5 +8,7 @@ RUN apt-get update && apt-get install -y \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN pip3 --no-cache-dir install --upgrade pip \
-	&& pip3 --no-cache-dir install --upgrade coverage \
-	&& pip3 --no-cache-dir install --upgrade nose
+	&& pip3 --no-cache-dir install --upgrade \
+		coverage \
+		nose \
+		mypy
