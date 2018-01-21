@@ -13,4 +13,6 @@ RUN pip3 --no-cache-dir install --upgrade pip \
 		nose \
 		mypy
 
+RUN useradd -ms /bin/bash runner
 USER runner
+WORKDIR /home/runner
