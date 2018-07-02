@@ -1,14 +1,14 @@
-FROM python:latest
+FROM python:2.7
 MAINTAINER mickare <info@mickare.de>
 
 RUN apt-get update && apt-get install -y \
-	python3-pip \
-	python3-dev \
+	python-pip \
+	python-dev \
 	gcc \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN pip3 --no-cache-dir install --upgrade pip \
-	&& pip3 --no-cache-dir install --upgrade \
+RUN pip --no-cache-dir install --upgrade pip \
+	&& pip --no-cache-dir install --upgrade \
 		coverage \
 		nose \
 		mypy
